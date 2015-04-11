@@ -6,12 +6,14 @@ My vim config file.
 
 1. mkdir ~/jvim
 
-2. curl https://raw.githubusercontent.com/jiemoon/jvim/master/vimrc ~/jvim/
+2. wget https://raw.githubusercontent.com/jiemoon/jvim/master/vimrc ~/jvim/
 
 3. ln -s ~/jvim/vimrc ~/.vimrc
 
 4. ln -s ~/jvim ~/.vim
 
-5. git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+5. install vundle
 
-6. 
+    git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+6. open vim, and input `:BundleInstall`
