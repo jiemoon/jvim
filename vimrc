@@ -131,8 +131,8 @@ map <C-t> :tabnew<CR>
 map <S-H> gT
 map <S-L> gt
 
-noremap <silent> <Left> :bp<CR>
-noremap <silent> <Right> :bn<CR>
+noremap <silent> <C-Left> :bp<CR>
+noremap <silent> <C-Right> :bn<CR>
 
 map <C-k> <C-w><Up>
 map <C-j> <C-w><Down>
@@ -288,7 +288,7 @@ colorscheme molokai
 let g:molokai_original = 1
 " colorscheme desert
 
-" clear trailing spaces when u save
+" remove tailing whitespace
 autocmd BufWritePre * :%s/\s\+$//e
 
 " 新建.c,.h,.sh,.java,py文件，自动插入文件头
@@ -328,3 +328,16 @@ func SetTitle()
   "新建文件后，自动定位到文件末尾
   autocmd BufNewFile * normal G
 endfunc
+
+func RunScript()
+  exec "w"
+  if &filetype == 'python'
+    exec "!python %"
+  elseif &filetype == 'ruby'
+    exec "!ruby %"
+  elseif &filetype == 'php'
+    exec "!php %"
+  endif
+endfunc
+
+map <F6> :call RunScript()<CR>
