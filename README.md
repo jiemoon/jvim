@@ -6,7 +6,7 @@ My vim config file.
 
 1. mkdir ~/jvim
 
-2. wget https://raw.githubusercontent.com/jiemoon/jvim/master/vimrc ~/jvim/
+2. curl https://raw.githubusercontent.com/jiemoon/jvim/master/vimrc > ~/jvim/vimrc
 
 3. ln -s ~/jvim/vimrc ~/.vimrc
 
